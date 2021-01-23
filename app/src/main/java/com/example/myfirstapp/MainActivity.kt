@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.wifi.WifiManager
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.View
 import android.widget.EditText
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.d("MAIN_ACTIVITY", "MAIN STARTED")
         setContentView(R.layout.activity_main)
+        if (!Settings.canDrawOverlays(getApplicationContext())) {
+            startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION))
+        }
         wifiManager = this.getSystemService(Context.WIFI_SERVICE) as WifiManager
         //broadcastReceiver = WIFIBroadcastReceiver(/*wifiManager*/)
         //val filter = IntentFilter(WIFI_STATE_CHANGED_ACTION)
