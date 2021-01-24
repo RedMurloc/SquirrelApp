@@ -58,7 +58,6 @@ class WifiCheckingService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         stopForeground(true)
-        Toast.makeText(this, "onDestroy()", Toast.LENGTH_LONG).show()
         unregisterReceiver(broadcastReceiver)
         Log.d("DESTROY!", "onDestroy()")
     }
