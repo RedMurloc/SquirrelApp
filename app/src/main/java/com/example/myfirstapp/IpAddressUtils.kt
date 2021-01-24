@@ -3,18 +3,11 @@ package com.example.myfirstapp
 import android.content.Context
 import android.net.wifi.WifiManager
 import java.net.InetAddress
-import java.net.UnknownHostException
-import kotlin.experimental.and
 
 class IpAddressUtils {
     companion object {
 
         private fun intToByteArray(hostAddress : Int) : ByteArray {
-            /*return byteArrayOf( (0xff and (hostAddress shr 24)).toByte(),
-                    (0xff and (hostAddress shr 16)).toByte(),
-                    (0xff and (hostAddress shr 8)).toByte(),
-                    (0xff and hostAddress).toByte()
-            )*/
             return byteArrayOf( (0xff and hostAddress).toByte(),
                     (0xff and (hostAddress shr 8)).toByte(),
                     (0xff and (hostAddress shr 16)).toByte(),

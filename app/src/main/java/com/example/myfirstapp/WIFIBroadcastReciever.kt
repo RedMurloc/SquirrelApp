@@ -12,18 +12,8 @@ import androidx.core.content.ContextCompat.getSystemService
 
 
 open class WIFIBroadcastReceiver : BroadcastReceiver() {
-    private /*lateinit*/ var TAG = "WIFIBroadcastReceiver"
-    var stupidCounter = 0
-    //private lateinit var wifiManager: WifiManager
-
-    /*init {
-        TAG = "WIFIBroadcastReceiver"
-    }*/
-
-    /*constructor(wifiManager: WifiManager) {
-        super()
-        this.wifiManager = wifiManager
-    }*/
+    //private /*lateinit*/ var TAG = "WIFIBroadcastReceiver"
+    //var stupidCounter = 0
 
     override fun onReceive(context: Context, intent: Intent) {
         if ((intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE, 228) == WifiManager.WIFI_STATE_ENABLED) /*&& (stupidCounter++ != 0)*/) {
@@ -39,20 +29,9 @@ open class WIFIBroadcastReceiver : BroadcastReceiver() {
 
             val rawMachinesList = StorageUtils.readStorage(context)
             val machinesList = StorageUtils.getCurrentTargets(context, rawMachinesList)
-            Log.d("recieved!", "${machinesList.size}")
-            //for (i in 0..9) {
-                //SendUDPTask().execute(*machinesList.toTypedArray())
-                val currentBroadcastAddress = IpAddressUtils.getCurrentBroadcast(context)
-                SendWakePacket.sendWakePacket(currentBroadcastAddress, machinesList)
-            //}
-            /*StringBuilder().apply {
-            append("Action: ${intent.action}\n")
-            append("URI: ${intent.toUri(Intent.URI_INTENT_SCHEME)}\n")
-            toString().also { log ->
-                Log.d(TAG, log)
-                Toast.makeText(context, log, Toast.LENGTH_LONG).show()
-            }
-        }*/
+
+            val currentBroadcastAddress = IpAddressUtils.getCurrentBroadcast(context)
+            SendWakePacket.sendWakePacket(currentBroadcastAddress, machinesList)
         }
     }
 }

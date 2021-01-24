@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.io.File
-import java.io.FileWriter
-
 
 class AddMachine : AppCompatActivity() {
 
@@ -41,7 +39,6 @@ class AddMachine : AppCompatActivity() {
     fun readStorage() {
         val view = findViewById<TextView>(R.id.savedMachinesView)
         val file = File(this.filesDir, STORAGE_NAME)
-        //file.delete()
         if (file.exists()) {
             val machinesList = file.readLines()
             for (i in machinesList.indices) {

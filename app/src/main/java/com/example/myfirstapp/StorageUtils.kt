@@ -16,7 +16,6 @@ class StorageUtils {
             if (file.exists()) {
                 rawMachinesList = file.readLines()
             } else {
-                //throw IOException("No storage file:" +
                 return machinesList
             }
 
@@ -33,7 +32,6 @@ class StorageUtils {
             val wifiManager = context.getSystemService(Context.WIFI_SERVICE) as WifiManager
             val wifiInfo = wifiManager.connectionInfo
             val rawWifiName = wifiInfo.ssid
-            Log.d("ssid", rawWifiName)
             val currentWifiName = if (rawWifiName.first() == '\"' && rawWifiName.last() == '\"') rawWifiName.substring(1, rawWifiName.lastIndex) else rawWifiName
             val currentTargets = ArrayList<Machine>()
 

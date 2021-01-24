@@ -30,7 +30,6 @@ class WifiCheckingService : Service() {
 
     override fun onCreate() {
         super.onCreate()
-        Toast.makeText(this, "onCreate()", Toast.LENGTH_LONG).show()
     }
 
     override fun onBind(intent: Intent): IBinder {
@@ -39,7 +38,6 @@ class WifiCheckingService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         super.onStartCommand(intent, flags, startId)
-        Toast.makeText(this, "onStartCommand()", Toast.LENGTH_LONG).show()
         when (intent?.getStringExtra(ACTION_NAME)) {
             ACTION_START_FOREGROUND_SERVICE -> {
                 startForeground()
@@ -54,7 +52,6 @@ class WifiCheckingService : Service() {
             else -> {throw RuntimeException("Wrong intent")}
         }
 
-        Toast.makeText(this, "onStartCommand()", Toast.LENGTH_LONG).show()
         return START_STICKY;
     }
 
