@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.squirrel
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -8,17 +8,13 @@ import android.net.NetworkInfo
 import android.net.wifi.WifiManager
 import android.util.Log
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 
 
 open class WIFIBroadcastReceiver : BroadcastReceiver() {
-    //private /*lateinit*/ var TAG = "WIFIBroadcastReceiver"
-    //var stupidCounter = 0
 
     override fun onReceive(context: Context, intent: Intent) {
         if ((intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE, 228) == WifiManager.WIFI_STATE_ENABLED) /*&& (stupidCounter++ != 0)*/) {
-                        Toast.makeText(context, "RECIEVED", Toast.LENGTH_LONG).show()
-            //Thread.sleep(2000)
+            //Toast.makeText(context, "RECIEVED", Toast.LENGTH_LONG).show()
 
             do {
                 Thread.sleep(1000)

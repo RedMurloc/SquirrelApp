@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myfirstapp">
+    package="com.squirrel">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -16,32 +16,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
-        <activity android:name=".AddMachine"></activity>
+        <activity android:name="com.squirrel.AddMachine"></activity>
 
         <service
-            android:name=".WifiCheckingService"
+            android:name="com.squirrel.WifiCheckingService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity
-            android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity">
-
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.squirrel.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <receiver
-            android:name="com.example.myfirstapp.RunOnStartup"
+            android:name="com.squirrel.RunOnStartup"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">

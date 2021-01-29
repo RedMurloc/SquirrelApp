@@ -1,10 +1,8 @@
-package com.example.myfirstapp
+package com.squirrel
 
 import android.content.Context
 import android.net.wifi.WifiManager
-import android.util.Log
 import java.io.File
-import java.io.IOException
 
 class StorageUtils {
     companion object {
@@ -21,7 +19,7 @@ class StorageUtils {
 
             for(i in rawMachinesList.indices) {
                 if (i % 2 == 0) {
-                    machinesList.add(Machine(rawMachinesList[i], rawMachinesList[i+1]))
+                    machinesList.add(Machine(rawMachinesList[i], rawMachinesList[i + 1]))
                 }
             }
 

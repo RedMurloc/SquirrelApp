@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.squirrel
 
 import android.content.Context
 import android.net.wifi.WifiManager

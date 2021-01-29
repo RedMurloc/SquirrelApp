@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.squirrel
 
 class Machine {
     private var macAddress: String = ""

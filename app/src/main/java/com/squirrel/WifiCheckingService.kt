@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.squirrel
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -12,10 +12,10 @@ import android.net.wifi.WifiManager
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.PRIORITY_MAX
+import com.squirrel.R
 import java.lang.RuntimeException
 
 class WifiCheckingService : Service() {

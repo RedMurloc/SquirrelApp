@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.squirrel
 
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
@@ -6,8 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.squirrel.R
 import java.io.File
 
 class AddMachine : AppCompatActivity() {
@@ -21,8 +20,8 @@ class AddMachine : AppCompatActivity() {
         setContentView(R.layout.activity_add_machine)
         findViewById<TextView>(R.id.savedMachinesView).movementMethod = ScrollingMovementMethod()
         readStorage()
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        /*val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)*/
     }
 
     fun saveMachine(view: View) {

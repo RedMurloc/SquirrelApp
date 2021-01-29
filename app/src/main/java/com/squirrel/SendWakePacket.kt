@@ -1,10 +1,9 @@
-package com.example.myfirstapp
+package com.squirrel
 
 import android.util.Log
 import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
-import java.net.SocketException
 
 class SendWakePacket {
     companion object {

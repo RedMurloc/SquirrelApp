@@ -1,4 +1,4 @@
-package com.example.myfirstapp
+package com.squirrel
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -10,8 +10,8 @@ class RunOnStartup : BroadcastReceiver() {
 
         val i = Intent(context, WifiCheckingService::class.java).apply {
             putExtra(
-                WifiCheckingService.ACTION_NAME,
-                WifiCheckingService.ACTION_START_FOREGROUND_SERVICE
+                    WifiCheckingService.ACTION_NAME,
+                    WifiCheckingService.ACTION_START_FOREGROUND_SERVICE
             )
         }
         i.addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
