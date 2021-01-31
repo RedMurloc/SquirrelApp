@@ -1,4 +1,4 @@
-package com.squirrel
+package com.squirrelWakeUp
 
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.squirrel.R
 import java.io.File
 
 class AddMachine : AppCompatActivity() {

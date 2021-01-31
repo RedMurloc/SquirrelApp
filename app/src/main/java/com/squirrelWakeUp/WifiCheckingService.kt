@@ -1,4 +1,4 @@
-package com.squirrel
+package com.squirrelWakeUp
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -15,7 +15,6 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.PRIORITY_MAX
-import com.squirrel.R
 import java.lang.RuntimeException
 
 class WifiCheckingService : Service() {

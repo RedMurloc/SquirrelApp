@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.squirrel">
+    package="com.squirrelWakeUp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -16,14 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
-        <activity android:name="com.squirrel.AddMachine"></activity>
+        <activity android:name="com.squirrelWakeUp.AddMachine"></activity>
 
         <service
-            android:name="com.squirrel.WifiCheckingService"
+            android:name="com.squirrelWakeUp.WifiCheckingService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.squirrel.MainActivity">
+        <activity android:name="com.squirrelWakeUp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,7 +31,7 @@
         </activity>
 
         <receiver
-            android:name="com.squirrel.RunOnStartup"
+            android:name="com.squirrelWakeUp.RunOnStartup"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">

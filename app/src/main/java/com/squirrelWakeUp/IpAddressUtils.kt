@@ -1,4 +1,4 @@
-package com.squirrel
+package com.squirrelWakeUp
 
 import android.content.Context
 import android.net.wifi.WifiManager

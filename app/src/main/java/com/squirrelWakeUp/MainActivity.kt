@@ -1,4 +1,4 @@
-package com.squirrel
+package com.squirrelWakeUp
 
 import android.app.ActivityManager
 import android.content.Context
@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.squirrel.R
 
 class MainActivity : AppCompatActivity() {
 

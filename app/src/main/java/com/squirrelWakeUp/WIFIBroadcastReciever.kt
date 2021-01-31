@@ -1,4 +1,4 @@
-package com.squirrel
+package com.squirrelWakeUp
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -7,7 +7,6 @@ import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.wifi.WifiManager
 import android.util.Log
-import android.widget.Toast
 
 
 open class WIFIBroadcastReceiver : BroadcastReceiver() {

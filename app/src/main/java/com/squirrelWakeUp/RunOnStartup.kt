@@ -1,4 +1,4 @@
-package com.squirrel
+package com.squirrelWakeUp
 
 import android.content.BroadcastReceiver
 import android.content.Context
