@@ -2,4 +2,11 @@
     <string name="app_name">Squirrel</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="button_start_monitoring">START WIFI MONITORING</string>
+    <string name="button_stop_monitoring">STOP WIFI MONITORING</string>
+    <string name="button_set_machine_address">SET MACHINE MAC ADDRESS</string>
+    <string name="button_wake_up">WAKE UP THE MACHINE</string>
+    <string name="edit_enter_a_wifi_network_name">Enter a wifi network name</string>
+    <string name="edit_enter_a_mac_address">Enter a mac address</string>
+    <string name="button_save">Save</string>
 </resources>
