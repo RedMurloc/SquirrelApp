@@ -1,4 +1,4 @@
-package com.squirrel
+package com.squirrelWakeUp
 
 class Machine {
     private var macAddress: String = ""
