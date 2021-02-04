@@ -1,5 +1,7 @@
 package com.squirrelWakeUp
 
+import android.util.Log
+
 class Machine {
     private var macAddress: String = ""
     private var wifiName: String = ""
@@ -22,8 +24,12 @@ class Machine {
     public fun getMacAddressBytes() : ByteArray {
         val macAddressBytes = ByteArray(6)
         val stringBytes = macAddress.split("-")
-        for (i in stringBytes.indices) {
-            macAddressBytes[i] = Integer.parseInt(stringBytes[i], 16).toByte()
+        try {
+            for (i in stringBytes.indices) {
+                macAddressBytes[i] = Integer.parseInt(stringBytes[i], 16).toByte()
+            }
+        } catch (e : NumberFormatException) {
+            Log.d("[Machine]", "Can't parse $macAddress")
         }
         return  macAddressBytes
     }
