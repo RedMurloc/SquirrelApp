@@ -26,12 +26,16 @@ class AddMachine : AppCompatActivity() {
     fun saveMachine(view: View) {
         val wifiName = findViewById<EditText>(R.id.wifiName).text.toString()
         val macAddress = findViewById<EditText>(R.id.macAddress).text.toString()
-        val file = File(this.filesDir, STORAGE_NAME)
-        file.writeText(wifiName + "\n")
-        file.appendText(macAddress + "\n")
-        val view = findViewById<TextView>(R.id.savedMachinesView)
-        view.text = ""
-        readStorage()
+        if (macAddress.matches(Regex("[0-9A-F]{2}(-[0-9A-F]{2}){5}"))) {
+            val file = File(this.filesDir, STORAGE_NAME)
+            file.writeText(wifiName + "\n")
+            file.appendText(macAddress + "\n")
+            val view = findViewById<TextView>(R.id.savedMachinesView)
+            view.text = ""
+            readStorage()
+        } else {
+            findViewById<EditText>(R.id.macAddress).setText(getString(R.string.edit_pattern_warning))
+        }
     }
 
     fun readStorage() {

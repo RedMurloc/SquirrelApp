@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Squirrel</string>
+    <string name="app_name">Squirrel WakeUp</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
     <string name="button_start_monitoring">START WIFI MONITORING</string>
@@ -9,4 +9,5 @@
     <string name="edit_enter_a_wifi_network_name">Enter a wifi network name</string>
     <string name="edit_enter_a_mac_address">Enter a mac address</string>
     <string name="button_save">Save</string>
+    <string name="edit_pattern_warning">mac address should match AA-AA-AA-AA-AA-AA pattern</string>
 </resources>
